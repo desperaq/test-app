@@ -1,0 +1,95 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Login Form -->
+    <form [formGroup]="registerForm" novalidate>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-6">
+
+            <!-- First Name-->
+            <input formControlName="firstName" type="text" id="firstName" class="fadeIn second" name="login"
+              placeholder="First name">
+            <div
+              *ngIf="registerForm.controls['firstName'].invalid && (registerForm.controls['firstName'].dirty || registerForm.controls['firstName'].touched)"
+              class="alert alert-danger">
+              <div *ngIf="registerForm.controls['firstName'].errors.required">
+                FirstName is required.
+              </div>
+            </div>
+
+            <!-- Last Name-->
+            <input formControlName="lastName" type="text" id="lastName" class="fadeIn third" name="login" placeholder="Last name">
+            <div
+            *ngIf="registerForm.controls['lastName'].invalid && (registerForm.controls['lastName'].dirty || registerForm.controls['lastName'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="registerForm.controls['lastName'].errors.required">
+              LastName is required.
+            </div>
+          </div>
+
+          <!-- Email-->
+            <input formControlName="email" type="email" id="email" class="fadeIn third" name="login" placeholder="Email">
+            <div
+            *ngIf="registerForm.controls['email'].invalid && (registerForm.controls['email'].dirty || registerForm.controls['email'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="registerForm.controls['email'].errors.required">
+              Email is required.
+            </div>
+          </div>
+
+          <!-- Password-->
+            <input formControlName="password" type="password" id="password" class="fadeIn third" name="login" placeholder="Password">
+            <div
+            *ngIf="registerForm.controls['password'].invalid && (registerForm.controls['password'].dirty || registerForm.controls['password'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="registerForm.controls['password'].errors.required">
+              Password is required.
+            </div>
+          </div>
+          </div>
+
+          <div class="col-6">
+            <input formControlName="address" type="text" id="address" class="fadeIn third" name="login" placeholder="Address">
+            <div
+            *ngIf="registerForm.controls['address'].invalid && (registerForm.controls['address'].dirty || registerForm.controls['address'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="registerForm.controls['address'].errors.required">
+              Address is required.
+            </div>
+          </div>
+
+            <input formControlName="phone" type="text" id="phone" class="fadeIn third" name="login" placeholder="Phone">
+            <div
+            *ngIf="registerForm.controls['phone'].invalid && (registerForm.controls['phone'].dirty || registerForm.controls['phone'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="registerForm.controls['phone'].errors.required">
+              Phone is required.
+            </div>
+          </div>
+            <input formControlName="dateOfBirth" type="text" id="dateOfBirth" class="fadeIn third" name="login" placeholder="Date of birth">
+            <div
+            *ngIf="registerForm.controls['dateOfBirth'].invalid && (registerForm.controls['dateOfBirth'].dirty || registerForm.controls['dateOfBirth'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="registerForm.controls['dateOfBirth'].errors.required">
+              Date of Birth is required.
+            </div>
+          </div>
+            <input formControlName="role" type="text" id="role" class="fadeIn third" name="login" placeholder="Role">
+            <div
+            *ngIf="registerForm.controls['role'].invalid && (registerForm.controls['role'].dirty || registerForm.controls['role'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="registerForm.controls['role'].errors.required">
+              Role is required.
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <p *ngIf="registerForm.status == 'INVALID'">You have to fulfill all the placeholders!</p>
+      <input [disabled]="registerForm.pristine || registerForm.invalid" (click)="onSave()" type="submit" class="fadeIn fourth" value="Sign Up">
+
+    </form>
+  </div>
+</div>
