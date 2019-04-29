@@ -10,10 +10,10 @@ const API = environment.apiUrl;
 
 @Injectable()
 export class BoardService {
-    board= '/getAllBoardCards/5cc2d42322ebf63c3b17ae4b';
-    boardId = '/board/5cc1c143fd898549d7d72a8d';
-    listCards = 'card/getAllListCards/5cb98b2533bfe1141b31b8e7';
-    putBoard = '/board/5cc2c10aae1f383070455758';
+    board= '/getAllBoardCards';
+    boardId = '/board';
+    listCards = 'card/getAllListCards';
+    putBoard = '/board';
 
 
     boardsCache: Board[] = [];

@@ -15,7 +15,6 @@ export class AuthService {
 
     public isAuthenticated():boolean {
         const id = this.getId();
-        console.log(id);
         return id != undefined;
     }
 

@@ -11,9 +11,7 @@ const API = environment.apiUrl;
 export class ListService {
     apiUrl ='/list';
 
-    constructor(private _http: HttpClient) {
-        
-    }
+    constructor(private _http: HttpClient) {}
 
     getAll() {
         return this._http.get(API + this.apiUrl).pipe(

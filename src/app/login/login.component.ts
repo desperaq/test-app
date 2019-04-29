@@ -16,7 +16,6 @@ export class LoginComponent implements OnInit {
   constructor(private route: ActivatedRoute, private fb: FormBuilder, private authService: AuthService, private loginService: LoginService) { }
 
   ngOnInit() {
-    console.log(this.getFromRegistered());
     this.createForm();
 
   }
@@ -39,7 +38,6 @@ export class LoginComponent implements OnInit {
   get f() {return this.loginForm.controls;}
 
   onSave() {
-    console.log(this.f);
     this.loginService.login(this.f.email.value, this.f.password.value).subscribe(
       res => console.log(res)
     )

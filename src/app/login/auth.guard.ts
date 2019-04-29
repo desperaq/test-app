@@ -18,7 +18,6 @@ export class AuthGuard implements CanActivate{
         }
 
         let url: string = state.url;
-        console.log(url);
         return this.verifyLogin(url);
     }
 

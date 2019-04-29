@@ -29,7 +29,6 @@ export class RegisterComponent implements OnInit {
 }
 
 onSave() {
-console.log(this.registerForm.value);
 this.router.navigate(['/login'], {
   queryParams: {message: "registered"}
 })
